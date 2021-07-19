@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>grid在线简历</title>
+  <title>个人简历</title>
   <meta name="viewport" content="width=device-width">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <link rel="stylesheet" href="//at.alicdn.com/t/font_974371_cqiyab42oyq.css">
@@ -51,6 +51,10 @@
       font: 14px/1.5 Arial;
       color: #333;
       padding-bottom: 30px;
+    }
+
+    .strong {
+      color: #fb6d75
     }
 
     /*page*/
@@ -196,19 +200,23 @@
         grid-column: 1;
         grid-row: 1;
       }
-
-      main {
+      
+      aside {
         grid-column: 1;
         grid-row: 2;
         padding: 0 10px;
       }
 
-      aside {
+      main {
         grid-column: 1;
         grid-row: 3;
         padding: 0 10px;
       }
-      
+
+      aside section:nth-child(3) {
+        display: none;
+      }
+
       section>.detail {
           grid-row: 2;
           grid-column: 1/4;
@@ -250,11 +258,70 @@
 <body>
   <header>
     <figure>
-      <img src="http://cloud.hunger-valley.com/18-12-19/61170968.jpg" alt="头像">
-      <figcaption>若愚</figcaption>
+      <img src="https://www.hualigs.cn/image/60f52dd6b3a7f.jpg" alt="头像">
+      <figcaption>周千淏（hào）</figcaption>
       <p>应聘前端工程师</p>
     </figure>
   </header>
+  <aside>
+    <section>
+      <span class="iconfont icon-personal"></span>
+      <h2>基本信息</h2>
+      <hr>
+      <div class="detail">
+        <div class="icon-list"><span class="iconfont icon-phone"></span><a class="strong" href="tel:17367077576">17367077576</a></div>
+        <div class="icon-list"><span class="iconfont icon-wechat"></span>17367077576</div>
+        <div class="icon-list"><span class="iconfont icon-email"></span><a class="strong" href="mailto:610170738@qq.com">610170738@qq.com</a></div>
+        <div class="icon-list"><span class="iconfont icon-education"></span>本科</div>
+      </div>
+    </section>
+    <section>
+      <span class="iconfont icon-introduction"></span>
+      <h2>掌握技能</h2>
+      <hr>
+      <div class="detail">
+        <ul>
+          <li>掌握HTML5/CSS3，熟悉传统布局、Flex布局，了解Grid布局、移动端适配、bootstrap库等</li>
+          <li>熟悉Vue技术栈如Vue-Router、Vuex、Vue-CLI及相关流行库的使用，有过vue3.0、vuex4.0、vue-router4.0的使用经验</li>
+          <li>熟悉原生微信小程序开发，原生组件库、API的使用</li>
+          <li>熟悉以上前端技术框架,能够熟练使用element-ui,vant,等ui框架进行项目开发</li>
+          <li>熟悉JavaScript/Typescript，CommonJS，ES6+语法</li>
+          <li>熟悉AJAX，DOM，BOM操作，闭包，原型链等技术，了解fetch</li>
+          <li>熟悉localStorage、sessionStorage等前端存储方案，记录用户操作习惯或常用数据，从而降低HTTP请求，提升用户体验</li>
+          <li>熟悉npm项目构建技术，git版本管理技术，了解webpack和vite开发构建工具的使用</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <span class="iconfont icon-skills"></span>
+      <h2>技能图谱</h2>
+      <hr>
+      <div class="detail">
+        <dl class="skill-bar">
+          <dt>JavaScript</dt>
+          <dd>
+            <div style="width:50%"></div>
+          </dd>
+          <dt>CSS3</dt>
+          <dd>
+            <div style="width:70%"></div>
+          </dd>
+          <dt>Node</dt>
+          <dd>
+            <div style="width:80%"></div>
+          </dd>
+          <dt>Vue</dt>
+          <dd>
+            <div style="width:60%"></div>
+          </dd>
+          <dt>React</dt>
+          <dd>
+            <div style="width:88%"></div>
+          </dd>
+        </dl>
+      </div>
+    </section>
+  </aside>
   <main>
     <section>
       <span class="iconfont icon-education"></span>
@@ -262,22 +329,13 @@
       <hr>
       <div class="detail">
         <div class="timeline-panel">
-          <div class="date">09/2013~07/2017</div>
-          <h3>电子科技大学</h3>
-          <p class="intro">计算机专业</p>
+          <div class="date">09/2016~07/2020</div>
+          <h3>浙江农林大学</h3>
+          <p class="intro">计算机科学与技术</p>
           <div class="detail">
-            多次获得校一等奖学金，成绩排名专业前10%.
+            主修c/c++/c#，数据结构，计算机网络，计算机组成原理，操作系统，数据库
           </div>
         </div>
-        <div class="timeline-panel">
-          <div class="date">09/2013~07/2017</div>
-          <h3>浙江大学</h3>
-          <p class="intro">计算机专业</p>
-          <div class="detail">
-            多次获得校一等奖学金，成绩排名专业前10%.
-          </div>
-        </div>
-
       </div>
     </section>
     <section>
@@ -286,8 +344,8 @@
       <hr>
       <div class="detail">
         <div class="timeline-panel">
-          <div class="date">09/2013~07/2017</div>
-          <h3>饥人谷</h3>
+          <div class="date">08/2020~07/2021</div>
+          <h3>浙江元旨科技有限公司</h3>
           <p class="intro">前端工程师</p>
           <div class="detail">
             <ul>
@@ -334,66 +392,6 @@
     </section>
 
   </main>
-  <aside>
-    <section>
-      <span class="iconfont icon-personal"></span>
-      <h2>基本信息</h2>
-      <hr>
-      <div class="detail">
-        <div class="icon-list"><span class="iconfont icon-phone"></span>13012341234</div>
-        <div class="icon-list"><span class="iconfont icon-wechat"></span>xiedaimala01</div>
-        <div class="icon-list"><span class="iconfont icon-email"></span>no-reply@jirengu.com</div>
-        <div class="icon-list"><span class="iconfont icon-education"></span>本科</div>
-
-
-
-
-      </div>
-    </section>
-    <section>
-      <span class="iconfont icon-introduction"></span>
-      <h2>掌握技能</h2>
-      <hr>
-      <div class="detail">
-        <ul>
-          <li>掌握HTML5/CSS3，熟悉传统布局、Flex布局、Grid布局、移动端适配等</li>
-          <li>熟悉Vue技术栈如Vue-Router、Vuex、Vue-CLI及相关流行库的使用，理解其重要概念</li>
-          <li>熟悉React / Redux技术栈等使用，能够使用React进行基本开发</li>
-          <li>熟悉前后端交互技术JSONP、AJAX，了解fetch></li>
-          <li>熟悉Node.js开发，能搭建基础后台开发</li>
-        </ul>
-      </div>
-    </section>
-    <section>
-      <span class="iconfont icon-skills"></span>
-      <h2>技能图谱</h2>
-      <hr>
-      <div class="detail">
-        <dl class="skill-bar">
-          <dt>JavaScript</dt>
-          <dd>
-            <div style="width:50%"></div>
-          </dd>
-          <dt>CSS3</dt>
-          <dd>
-            <div style="width:70%"></div>
-          </dd>
-          <dt>Node</dt>
-          <dd>
-            <div style="width:80%"></div>
-          </dd>
-          <dt>Vue</dt>
-          <dd>
-            <div style="width:60%"></div>
-          </dd>
-          <dt>React</dt>
-          <dd>
-            <div style="width:88%"></div>
-          </dd>
-        </dl>
-      </div>
-    </section>
-  </aside>
 </body>
 
 </html>
