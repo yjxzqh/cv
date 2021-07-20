@@ -6,7 +6,7 @@
   <title>个人简历</title>
   <meta name="viewport" content="width=device-width">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_974371_cqiyab42oyq.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_2686790_d9e6hjqet2j.css">
   <style>
     /*css reset*/
     * {
@@ -26,7 +26,7 @@
     /*layout*/
     body {
       display: grid;
-      grid: auto auto / 1fr 300px 700px 1fr;
+      grid: auto auto auto/ 1fr 300px 700px 1fr;
     }
 
     header {
@@ -35,15 +35,19 @@
       grid-row: 1;
     }
 
+    article {
+      grid-column: 2;
+      grid-row: 2/3;
+    }
+
     main {
       grid-column: 3;
-      grid-row: 2;
+      grid-row: 2/4;
     }
 
     aside {
-
       grid-column: 2;
-      grid-row: 2;
+      grid-row: 3/4;
     }
 
     /*common*/
@@ -175,14 +179,30 @@
       margin-top: 10px;
     }
 
+    .icon-list:nth-child(1) {
+      margin-top: 10px;
+    }
+
     @media (max-width: 1000px) {
       body {
-        grid: auto 400px / 1fr 300px 400px 1fr;
+        grid: auto 215px auto / 1fr 300px 400px 1fr;
       }
 
-      main, aside {
-        grid-row: 2/span 2;
+      article {
+        grid-column: 2;
+        grid-row: 2/3;
       }
+
+      main {
+        grid-column: 3;
+        grid-row: 2/4;
+      }
+
+      aside {
+        grid-column: 2;
+        grid-row: 3/4;
+      }
+
 
       section .timeline-panel .detail {
         grid-row: 2;
@@ -193,17 +213,24 @@
 
     @media (max-width: 768px) {
       body {
-        grid: auto auto auto / 1fr;
+        grid: auto auto auto auto/ 1fr;
         padding: 0 0 30px 0;
       }
+
       header {
         grid-column: 1;
         grid-row: 1;
       }
 
-      aside {
+      article {
         grid-column: 1;
         grid-row: 2;
+        padding: 0 10px;
+      }
+
+      aside {
+        grid-column: 1;
+        grid-row: 4;
         padding: 0 10px;
       }
 
@@ -213,7 +240,7 @@
         padding: 0 10px;
       }
 
-      aside section:nth-child(3) {
+      aside section:nth-child(2) {
         display: none;
       }
 
@@ -251,6 +278,10 @@
         grid-row: 3;
         grid-column: 1/3;
       }
+
+      .icon-list:nth-child(1) {
+        margin-top: 20px;
+      }
     }
   </style>
 </head>
@@ -263,7 +294,7 @@
       <p>应聘前端工程师</p>
     </figure>
   </header>
-  <aside>
+  <article>
     <section>
       <span class="iconfont icon-personal"></span>
       <h2>基本信息</h2>
@@ -273,10 +304,13 @@
         <div class="icon-list"><span class="iconfont icon-wechat"></span>17367077576</div>
         <div class="icon-list"><span class="iconfont icon-email"></span><a class="strong" href="mailto:610170738@qq.com">610170738@qq.com</a></div>
         <div class="icon-list"><span class="iconfont icon-education"></span>本科</div>
+        <div class="icon-list"><span class="iconfont icon-position"></span>杭州</div>
       </div>
     </section>
+  </article>
+  <aside>
     <section>
-      <span class="iconfont icon-introduction"></span>
+      <span class="iconfont icon-skills"></span>
       <h2>掌握技能</h2>
       <hr>
       <div class="detail">
@@ -293,7 +327,7 @@
       </div>
     </section>
     <section>
-      <span class="iconfont icon-skills"></span>
+      <span class="iconfont icon-chart"></span>
       <h2>技能图谱</h2>
       <hr>
       <div class="detail">
@@ -319,6 +353,19 @@
             <div style="width:80%"></div>
           </dd>
         </dl>
+      </div>
+    </section>
+    <section>
+      <span class="iconfont icon-comment"></span>
+      <h2>个人评价</h2>
+      <hr>
+      <div class="detail">
+        <ul>
+          <li>有良好的的编码习惯，会遵循eslint规范和git分支开发规范</li>
+          <li>对自己有一定要求，会对困难进行总结梳理，自我提升</li>
+          <li>做事认真负责，能够在合理的工期内完成工作内容，在职期间无延期和明显事故</li>
+          <li>喜欢热情主动的团队氛围，更好的融入团队协作开发</li>
+        </ul>
       </div>
     </section>
   </aside>
