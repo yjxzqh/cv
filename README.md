@@ -1,3 +1,3 @@
-## 个人简历
-* 前端工程师H5履历
-* 2021.7.20日更新
+## 个人简历（Own Resume）
+* 前端开发工程师（front-end developer Resume）
+* 2023.3.14 update
